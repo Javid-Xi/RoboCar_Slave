@@ -5,18 +5,17 @@
 * @author       Javid
 * @date         2020-05-08
 * @version      1.0
-* @Note			JTAG SWD设置
-*				printf设置
+* @Note			printf设置
 *				位操作设置
 ***********************************************************/
 
 #ifndef __SYS_H
-#define __SYS_H	
+#define __SYS_H
+
 #include "stm32f10x.h"
 #include <stdio.h>																    
 	 
 //位带操作,实现51类似的GPIO控制功能
-//具体实现思想,参考<<CM3权威指南>>第五章(87页~92页).
 //IO口操作宏定义
 #define BITBAND(addr, bitnum) ((addr & 0xF0000000)+0x2000000+((addr &0xFFFFF)<<5)+(bitnum<<2)) 
 #define MEM_ADDR(addr)  *((volatile unsigned long  *)(addr)) 

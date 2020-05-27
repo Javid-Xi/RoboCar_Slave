@@ -5,8 +5,7 @@
 * @author       Javid
 * @date         2020-05-08
 * @version      1.0
-* @Note			JTAG SWD设置
-*				printf设置
+* @Note			printf设置
 *				位操作设置
 ***********************************************************/
 
